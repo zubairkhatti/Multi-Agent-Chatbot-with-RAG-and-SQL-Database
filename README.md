@@ -115,7 +115,7 @@ python src/prepare_vector_db.py
 
 ### Streamlit Interface
 ```bash
-streamlit run src/streamlit_app.py
+streamlit run src/app.py
 ```
 
 ## 📁 Project Structure
