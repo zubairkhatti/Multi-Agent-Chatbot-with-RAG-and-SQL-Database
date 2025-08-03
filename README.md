@@ -99,12 +99,12 @@ cp env_example .env
 ```
 
 ### 4. Download Required Data
-```bash
-# Download databases to data/ folder:
-# - travel.sqlite (109MB)
-# - Chinook.db (984KB)
-# - Add your documents to data/unstructured_docs/
-```
+
+Download databases to data/ folder:
+- [travel.sqlite](https://storage.googleapis.com/benchmarks-artifacts/travel-db/travel2.sqlite) (109MB)
+- [Chinook.db](https://drive.google.com/file/d/1HH0NdFCiVc4Moge5Rmx2ri_gXNhfQyTZ/view?usp=sharing) (984KB)
+- Add your documents to `data/unstructured_docs/`
+
 
 ### 5. Prepare Vector Databases
 ```bash
