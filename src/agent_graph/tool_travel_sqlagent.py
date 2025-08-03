@@ -73,7 +73,15 @@ class TravelSQLAgentTool:
 
 @tool
 def query_travel_sqldb(query: str) -> str:
-    """Query the Swiss Airline SQL Database and access all the company's information. Input should be a search query."""
+    """
+    Query the travel-related SQL database using a natural language question.
+
+    Args:
+        query (str): User's natural language question related to the travel domain.
+
+    Returns:
+        str: Final answer generated from SQL results using the language model.
+    """
     agent = TravelSQLAgentTool(
         llm=TOOLS_CFG.travel_sqlagent_llm,
         sqldb_directory=TOOLS_CFG.travel_sqldb_directory,
