@@ -12,7 +12,7 @@ A sophisticated conversational AI system that combines Retrieval-Augmented Gener
 
 The chatbot acts as the central orchestrator, deciding when to use external tools and how to process results before responding to users.
 
-```
+```bash
 User Query → LangGraph Agent → Tool Router → [SQL Agent | RAG Tool | Search Tool] → Response
 ```
 
@@ -119,31 +119,44 @@ streamlit run src/app.py
 ```
 
 ## 📁 Project Structure
-```
+```bash
 Multi-Agent-Chatbot-with-RAG-and-SQL-Database/
+|
 ├── configs/ # Configuration files
 │ ├── tools_config.yml # Tool-specific settings
 │ └── project_config.yml # Global project settings
+|
 ├── src/ # Main application code
+| |
 │ ├── agent_graph/ # LangGraph agent implementation
 │ │ ├── build_full_graph.py
 │ │ ├── tool_*.py # Individual tool implementations
 │ │ └── load_tools_config.py
+| |
 │ ├── chatbot/ # Chatbot backend
 │ │ ├── chatbot_backend.py
 │ │ ├── memory.py # Conversation persistence
 │ │ └── load_config.py
+| |
 │ ├── ui/ # Streamlit UI components
+| |
 │ ├── utils/ # Utility functions
+| |
 │ ├── app.py # Streamlit application
 │ └── prepare_vector_db.py # Vector database setup
+|
 ├── data/ # Data storage
 │ ├── travel.sqlite # Travel database
 │ ├── Chinook.db # Music database
+| |
 │ ├── unstructured_docs/ # Document collections
+| |
 │ └── _vectordb/ # Vector databases
+|
 ├── memory/ # Conversation logs (CSV files)
+|
 ├── Notebooks/ # Development and exploration notebooks
+|
 └── images/ # Documentation images
 ```
 
